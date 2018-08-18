@@ -46,7 +46,7 @@ Some kind of activity performed in the fields. The activities in this applicatio
  - Detasseling
  - Harvesting
  - Storage
- - Sell
+ - Sale
  
 
 Each activity has varying statuses associated. The statuses for each activity is listed below.
@@ -63,7 +63,8 @@ Each activity has varying statuses associated. The statuses for each activity is
  - Detasseling: Planned, Done
  - Harvesting: Done
  - Storage: Done
- - Sell: Sold
+ - Delivery: Done
+ - Sale: Sold
  
 # Features
 
@@ -171,7 +172,13 @@ When I view the farmer's timeline <br />
 Then I should see the soil sampling activity in done status <br />
 And I should see the soil sampling in the planning phase of the growing season
 
-### View Planting Growing Season Activities
+### View Planting Growing Phase Activities
+
+#### Story
+
+As an agronomist <br />
+I want to view all Planting activities sequentially <br />
+So that I can ensure the farmer's fields produce the most yield for the harvest phase.
 
 #### Planting (Activity) Scenarios
 
@@ -250,3 +257,72 @@ And I have done an observation <br />
 When I view the farmer's timeline <br />
 Then I should see the three observation activities in done status <br />
 And I should see the three observations in the planting phase of the growing season
+
+#### Detasseling Scenarios
+
+##### Scenario: Detasseling Planned
+Given I am working with one farmer <br />
+And I planned detasseling <br />
+When I view the farmer's timeline <br />
+Then I should see the detasseling activity in planned status <br />
+And I should see the detasseling in the planting phase of the growing season
+
+##### Scenario: Detasseling Done
+Given I am working with one farmer <br />
+And I planned detasseling <br />
+When I view the farmer's timeline <br />
+Then I should see the detasseling activity in done status <br />
+And I should see the detasseling in the planting phase of the growing season
+
+### View Harvest Growing Phase Activities
+
+#### Story
+
+As an agronomist <br />
+I want to view all Harvest activities sequentially <br />
+So that I can reap the rewards of Planning and Planting phase work.
+
+#### Harvesting (Activity) Scenarios
+
+##### Scenario: Harvesting Done
+Given I am working with one farmer <br />
+And we have finished harvesting <br />
+When I view the farmer's timeline <br />
+Then I should see the harvesting activity in done status <br />
+And I should see the harvesting in the harvest phase of the growing season
+
+#### Storage Scenarios
+
+##### Scenario: Storage Done
+Given I am working with one farmer <br />
+And we have stored the crop <br />
+When I view the farmer's timeline <br />
+Then I should see the storage activity in done status <br />
+And I should see the storarge in the harvest phase of the growing season
+
+#### Delivery Scenarios
+
+##### Scenario: Delivery Done
+Given I am working with one farmer <br />
+And we have delivered the crop to the co-op <br />
+When I view the farmer's timeline <br />
+Then I should see the delivery activity in done status <br />
+And I should see the delivery in the harvest phase of the growing season
+
+#### Sale Scenarios
+
+##### Scenario: Sale
+Given I am working with one farmer <br />
+And we have sold the crop to the co-op <br />
+When I view the farmer's timeline <br />
+Then I should see the sale activity in sold status <br />
+And I should see the sale in the harvest phase of the growing season
+
+##### Scenario: Multiple Sales
+Given I am working with one farmer <br />
+And we have sold the crop to the co-op <br />
+And we have sold the crop on the open market <br />
+And we have sold the crop to another farmer <br />
+When I view the farmer's timeline <br />
+Then I should see three sale activities in sold status <br />
+And I should see the sales in the harvest phase of the growing season
