@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{63B6AEA6-EC1E-490C-AB69-6B559FBC8B16}"
+ProjectSection(SolutionItems) = preProject
+	..\.gitignore = ..\.gitignore
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9B63FAFD-AC6E-4AAA-BC5D-F91C909B55D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyRescue", "src\LegacyRescue\LegacyRescue.csproj", "{CC2F7F30-911D-4341-BC19-5035255FA66C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{C8115085-3D60-4E36-A8A6-A38E5BC81D07}"
+ProjectSection(SolutionItems) = preProject
+	..\readme.md = ..\readme.md
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC2F7F30-911D-4341-BC19-5035255FA66C} = {9B63FAFD-AC6E-4AAA-BC5D-F91C909B55D1}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC2F7F30-911D-4341-BC19-5035255FA66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2F7F30-911D-4341-BC19-5035255FA66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2F7F30-911D-4341-BC19-5035255FA66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2F7F30-911D-4341-BC19-5035255FA66C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
